@@ -19,7 +19,12 @@ class MessageWidget extends StatelessWidget {
       children: [
         Flexible(
           child: Container(
-            constraints: const BoxConstraints(maxWidth: 520),
+            padding: const EdgeInsets.symmetric(
+              vertical: 16,
+              horizontal: 21,
+            ),
+            margin: const EdgeInsets.only(bottom: 10),
+            constraints: const BoxConstraints(maxWidth: 550),
             decoration: BoxDecoration(
               color: isFromUser
               ?Theme.of(context).colorScheme.primary
