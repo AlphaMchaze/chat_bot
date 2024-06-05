@@ -20,8 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
   @override
-  void iniState() {
+  void initState() {
     super.initState();
+    print('Home Screen is being Initialized');
     _model = GenerativeModel(
       model: 'gemini-pro',
       apiKey: const String.fromEnvironment('api_key'),
@@ -33,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Let us Work'),
+        title: Center(child: const Text('Let us Work With A.I')),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
