@@ -18,7 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final ScrollController _scrollController = ScrollController();
   bool _loading = false;
 
-
   @override
   void initState() {
     super.initState();
@@ -34,8 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  const Center(child:
-        Text('Let us Work With A.I')),
+        title: const Center(child: Text('Let us Work With A.I')),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -60,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
             ),
-           Padding(
+            Padding(
               padding: const EdgeInsets.symmetric(
                 vertical: 25,
                 horizontal: 15,
@@ -77,14 +75,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const SizedBox(height: 16),
-               TextButton(onPressed: (){
-                 _sendChatMessage(_textController.text);
-               },
-
-                   child: const Icon(
-                     Icons.arrow_forward
-                   ))
-
+                  TextButton(
+                      onPressed: () {
+                        _sendChatMessage(_textController.text);
+                      },
+                      child: const Icon(Icons.arrow_forward))
                 ],
               ),
             )
@@ -129,8 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _scrollDown() {
     WidgetsBinding.instance
-        .addPostFrameCallback(
-          (_) => _scrollController.animateTo(
+        .addPostFrameCallback((_) => _scrollController.animateTo(
               _scrollController.position.maxScrollExtent,
               duration: const Duration(
                 milliseconds: 800,
