@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     print('Home Screen is being Initialized');
     _model = GenerativeModel(
       model: 'gemini-pro',
-      apiKey: const String.fromEnvironment('api_key'),
+      apiKey: "AIzaSyC7GQ1EyFvwDR5PWlCA5sKfAjDFeUn8QaU",
     );
     _chatSession = _model.startChat();
   }
@@ -34,7 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Let us Work With A.I')),
+        title:  const Center(child:
+        Text('Let us Work With A.I')),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -76,6 +77,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const SizedBox(height: 16),
+               TextButton(onPressed: (){
+                 _sendChatMessage(_textController.text);
+               },
+
+                   child: const Icon(
+                     Icons.arrow_forward
+                   ))
+
                 ],
               ),
             )
